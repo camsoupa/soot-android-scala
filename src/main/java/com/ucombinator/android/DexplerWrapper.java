@@ -33,7 +33,6 @@ public class DexplerWrapper {
 		Iterator<Edge> sources = cg.listener();
 		Iterator<Edge> appMethods = Iterators.filter(sources, new Predicate<Edge>() {
 			public boolean apply(Edge e) {
-				System.out.println(e.src());
 				return !e.src().isJavaLibraryMethod() && !e.src().method().getDeclaringClass().isLibraryClass();
 			}
 		});
